@@ -6,4 +6,5 @@ pydeck
 folium
 streamlit-folium
 google-generativeai
+googlemaps
 fpdf2
