@@ -9,4 +9,5 @@ google-generativeai
 googlemaps
 fpdf2
 polyline
+prophet
 
