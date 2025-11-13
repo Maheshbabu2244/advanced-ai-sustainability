@@ -90,7 +90,7 @@ def get_ai_response(prompt, max_tokens=512, temperature=0.2):
     # --- PAYLOAD UPDATED for chat/completions endpoint ---
     # We must specify a model. You can change this to any model ID you have access to.
     payload = {
-        "model": "btlm-3b-8k-base", # Or "llama-3-8b-instruct", etc.
+        "model": "qwen-3-32b", # Or "llama-3-8b-instruct", etc.
         "messages": [
             {"role": "user", "content": prompt}
         ],
@@ -596,3 +596,4 @@ with tabs[4]:
 st.markdown('--- \n <small class="small-muted">Built with Cerebras AI + OpenRouteService + OpenStreetMap · Demo UI</small>', unsafe_allow_html=True)
 
 # End of file
+
