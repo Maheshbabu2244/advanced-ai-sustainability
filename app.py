@@ -90,7 +90,7 @@ def get_ai_response(prompt, max_tokens=512, temperature=0.2):
     # --- PAYLOAD UPDATED for chat/completions endpoint ---
     # We must specify a model. You can change this to any model ID you have access to.
     payload = {
-        "model": "qwen-3-32b", # Or "llama-3-8b-instruct", etc.
+        "model": "btlm-3b-8k-base", # Or "llama-3-8b-instruct", etc.
         "messages": [
             {"role": "user", "content": prompt}
         ],
@@ -238,11 +238,12 @@ def ors_route(start_coords, end_coords, profile='foot-walking'):
 
 st.markdown('<div class="header-row"><div class="logo-circle">AI</div><div><div style="font-weight:800;font-size:20px">Advanced AI Sustainability Dashboard</div><div class="small-muted">Cerebras + OpenRouteService + OpenStreetMap</div></div></div>', unsafe_allow_html=True)
 
-cols = st.columns([3,1])
-with cols[1]:
-    st.write('')
-    if st.button('About / Help'):
-        st.info('This dashboard uses Cerebras for AI and OpenRouteService for routing. Add your keys to .streamlit/secrets.toml: ORS_API_KEY, OPENCHARGEMAP_API_KEY, CEREBRAS_API_KEY, CEREBRAS_ENDPOINT_URL')
+# --- "About / Help" button REMOVED ---
+# cols = st.columns([3,1])
+# with cols[1]:
+#     st.write('')
+#     if st.button('About / Help'):
+#         st.info('This dashboard uses Cerebras for AI and OpenRouteService for routing. Add your keys to .streamlit/secrets.toml: ORS_API_KEY, OPENCHARGEMAP_API_KEY, CEREBRAS_API_KEY, CEREBRAS_ENDPOINT_URL')
 
 # --- Main tabs UPDATED (Multimodal tab removed) ---
 tabs = st.tabs([
